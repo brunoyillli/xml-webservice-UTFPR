@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Animal" type="AnimalType"/>
+
+  <xs:complexType name="AnimalType">
+    <xs:sequence>
+      <xs:element name="nome" type="xs:string"/>
+      <xs:element name="especie" type="xs:string"/>
+      <xs:element name="raca" type="xs:string"/>
+      <xs:element name="genero" type="xs:string"/>
+      <xs:element name="dataNascimento" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Animais" type="AnimaisType"/>
+
+  <xs:complexType name="AnimaisType">
+    <xs:sequence>
+      <xs:element name="Animal" type="AnimalType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Pet Shop webconf</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <fieldset>
+                <legend>Dados do Animal:</legend>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Nome:" for="nome" />
+                    <h:inputText id="nome" value="#{jsfAnimal.animal.nome}"/>
+                    <h:outputLabel value="Espécie:" for="especie" />
+                    <h:inputText id="especie" value="#{jsfAnimal.animal.especie}"/>
+                    <h:outputLabel value="Raça:" for="raca" />
+                    <h:inputText id="raca" value="#{jsfAnimal.animal.raca}"/>
+                    <h:outputLabel value="Gênero:" for="genero" />
+                    <h:inputText id="genero" value="#{jsfAnimal.animal.genero}"/>
+                    <h:outputLabel value="Data Nascimento (yyyy-MM-dd):" for="dataNascimento" />
+                    <h:inputText id="dataNascimento" value="#{jsfAnimal.animal.dataNascimento}" >
+                        <f:convertDateTime pattern="yyyy-MM-dd"/>
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandButton value="Adicionar Animal" action="#{jsfAnimal.adicionarAnimal()}" />
+            </fieldset>
+            <br/>
+            <h:commandButton value="Escrever XML" action="#{jsfAnimal.escreverXML()}" />
+            <h:commandButton value="Ler XML" action="#{jsfAnimal.lerXML()}" />
+        </h:form>
+    </h:body>
+</html>

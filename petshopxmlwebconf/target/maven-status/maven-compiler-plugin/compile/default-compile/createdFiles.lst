@@ -1,0 +1,7 @@
+io\github\brunoyillli\petshopxmlwebconf\ejb\EjbAnimal.class
+io\github\brunoyillli\petshopxmlwebconf\data\domain\Animal.class
+io\github\brunoyillli\petshopxmlwebconf\jsf\JsfAnimal.class
+io\github\brunoyillli\petshopxmlwebconf\JakartaRestConfiguration.class
+io\github\brunoyillli\petshopxmlwebconf\data\domain\Animais.class
+io\github\brunoyillli\petshopxmlwebconf\ejb\EjbAnimalImpl.class
+io\github\brunoyillli\petshopxmlwebconf\resources\JakartaEE8Resource.class
