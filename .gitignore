@@ -1,2 +1,5 @@
 /SoapServer/target/
 /SoapClient/target/
+/RestInterface/target/
+/RestRequester/target/
+/RestProvider/target/
