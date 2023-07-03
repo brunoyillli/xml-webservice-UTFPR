@@ -4,3 +4,9 @@
 /RestRequester/target/
 /RestProvider/target/
 /XmlOPS/
+/OperacoesProvider/target/
+/OperacoesRequester/target/
+/OperacoesRequest/target/
+/ClientesCidades/target/
+/ClientesWebService/target/
+/ClientesRest/target/

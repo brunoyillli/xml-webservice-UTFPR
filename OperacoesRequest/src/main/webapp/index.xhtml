@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Soma</title>
+    </h:head>
+    <h:body>
+        <h:form id="formSoma">
+            <h:outputLabel for="operador1" value="Digite um numero inteiro: "/>
+            <h:inputText id="operador1" value="#{jsfSoma.operador1}"/>
+            <h:outputLabel for="operador2" value="Digite um segundo numero inteiro: "/>
+            <h:inputText id="operador2" value="#{jsfSoma.operador2}"/>
+            <h:commandButton value="Somar" action="#{jsfSoma.somar(jsfSoma.operador1, jsfSoma.operador2)}"/>
+            <h:outputText value="Resultado: #{jsfSoma.resultadoSoma}"/>
+            
+            <!-- Listagem -->
+            <h:dataTable value="#{jsfSoma.getAll()}" var="soma">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Operador 1"/>
+                    </f:facet>
+                    <h:outputText value="#{soma.operador1}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Operador 2"/>
+                    </f:facet>
+                    <h:outputText value="#{soma.operador2}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Resultado"/>
+                    </f:facet>
+                    <h:outputText value="#{soma.resultado}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
